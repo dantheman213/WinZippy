@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+; COMPRESS (DIRECTORY BACKGROUND)
+; HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\MenuItemNameBackground]
+
+; Setup context menu item for click on right panel:
+[HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\Compress with WinZippy\command]
+@="C:\\Program Files (x86)\\WinZippy\\WinZippy.exe --compress \"%1\""
+
+; Optional: specify an icon for the item:   
+; HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\Compress current folder with WinZippy]
+;"icon"="C:\\yourpath\\appicon.ico"
+
+; Optional: specify a position in the menu
+; HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\MenuItemNameBackground]
+;"position"="Bottom"
+
+; -------------------------------------------------------------------------------------
+
+; COMPRESS DIRECTORY EXPLICITLY SELECTED
+; [HKEY_CURRENT_USER\Software\Classes\directory\shell\MenuItemNamePanel]
+; Setup context menu item for click on folders tree item:
+[HKEY_CURRENT_USER\Software\Classes\directory\shell\Compress with WinZippy\command]
+@="C:\\Program Files (x86)\\WinZippy\\WinZippy.exe --compress \"%1\""
+
+; Optional: specify an icon for the item:   
+; [HKEY_CURRENT_USER\Software\Classes\directory\shell\MenuItemNamePanel]
+;"icon"="C:\\yourpath\\appicon.ico"
+
+; Optional: specify a position in the menu
+; [HKEY_CURRENT_USER\Software\Classes\directory\shell\MenuItemNamePanel]
+;"position"="Top"
+
+; COMPRESS FILE EXPLICITLY SELECTED
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Compress with WinZippy\command]
+@="C:\\Program Files (x86)\\WinZippy\\WinZippy.exe --compress \"%1\""
