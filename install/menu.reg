@@ -5,7 +5,7 @@ Windows Registry Editor Version 5.00
 
 ; Setup context menu item for click on right panel:
 [HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\Compress with WinZippy\command]
-@="C:\\Program Files (x86)\\WinZippy\\WinZippy.exe --compress \"%1\""
+@="C:\\Program Files\\WinZippy\\WinZippy.exe --compress \"%1\""
 
 ; Optional: specify an icon for the item:   
 ; HKEY_CURRENT_USER\Software\Classes\directory\Background\shell\Compress current folder with WinZippy]
@@ -21,7 +21,7 @@ Windows Registry Editor Version 5.00
 ; [HKEY_CURRENT_USER\Software\Classes\directory\shell\MenuItemNamePanel]
 ; Setup context menu item for click on folders tree item:
 [HKEY_CURRENT_USER\Software\Classes\directory\shell\Compress with WinZippy\command]
-@="C:\\Program Files (x86)\\WinZippy\\WinZippy.exe --compress \"%1\""
+@="C:\\Program Files\\WinZippy\\WinZippy.exe --compress \"%1\""
 
 ; Optional: specify an icon for the item:   
 ; [HKEY_CURRENT_USER\Software\Classes\directory\shell\MenuItemNamePanel]
@@ -33,4 +33,18 @@ Windows Registry Editor Version 5.00
 
 ; COMPRESS FILE EXPLICITLY SELECTED
 [HKEY_CURRENT_USER\Software\Classes\*\shell\Compress with WinZippy\command]
-@="C:\\Program Files (x86)\\WinZippy\\WinZippy.exe --compress \"%1\""
+@="C:\\Program Files\\WinZippy\\WinZippy.exe --compress \"%1\""
+
+
+; -------------------------------------------------------------------------------------
+; EXTRACT FILE FORMATS BY OPENING APP AUTOMATICALLY
+; https://docs.microsoft.com/en-us/windows/win32/shell/fa-sample-scenarios?redirectedfrom=MSDN
+; https://docs.microsoft.com/en-us/windows/win32/shell/fa-progids
+; https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/cc144150(v%3Dvs.85)
+
+; TODO
+; *.zip
+; *.tar
+; *.tar.gz
+; *.rar
+; *.7z
